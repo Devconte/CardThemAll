@@ -1,0 +1,56 @@
+### 🟢 1. Créer un utilisateur
+POST http://localhost:5204/api/users
+Content-Type: application/json
+
+{
+  "username": "Romain",
+  "email": "romain@example.com"
+}
+
+
+### 🟢 2. Récupérer un utilisateur par ID
+GET http://localhost:5204/api/users/1
+
+### 🟢 3. Récupérer tous les utilisateurs
+GET http://localhost:5204/api/users
+
+### 🟢 4. Créer une collection pour un utilisateur
+POST http://localhost:5204/api/collections
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "name": "Collection de Dracaufeu"
+}
+
+### 🟢 5. Voir toutes les collections d’un utilisateur
+GET http://localhost:5204/api/collections/1
+
+### 🟢 6. Ajouter une carte à une collection
+POST http://localhost:5204/api/collections/add-card
+Content-Type: application/json
+
+{
+  "collectionId": 1,
+  "cardId": 2,
+  "quantity": 1
+}
+
+### 🟢 7. Voir toutes les cartes d'une collection
+GET http://localhost:5204/api/collections/cards/1
+
+### 🟢 8. Retirer une carte d'une collection
+POST http://localhost:5204/api/collections/remove-card
+Content-Type: application/json
+
+{
+  "collectionId": 1,
+  "cardId": 2,
+  "quantity": 1
+}
+
+### 🟢 9. Récupérer toutes les cartes Pokémon
+GET http://localhost:5204/api/cards
+
+### 🟢 10. Récupérer une carte par ID
+GET http://localhost:5204/api/cards/1
